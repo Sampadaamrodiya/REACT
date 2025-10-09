@@ -98,46 +98,65 @@
 
 
 
+// import React from 'react'
+// import { useState } from 'react';
+// const App=()=>{
+//     let [data,SetData]= useState({
+//       name:"",
+//       email:"",
+//       password:""
+//     })
+
+//     function fun1(e){
+//       let {name,value}=e.target
+//       SetData({...data,[name]:value})
+//       console.log(data)
+//     }
+//     let [show,SetShow]=useState({})
+//     function done(){
+//       SetShow({...data})
+//       console.log(show)
+//     }
+
+//   return(
+//     <div>
+//       {show.name}
+//       <input type="text" onChange={fun1} name="name" value={data.name} placeholder="Enter your name"></input> 
+//       <br></br> <br></br>
+//       {show.email}
+//       <input type="email" onChange={fun1} name="email" value={data.email} placeholder="Enter your email"></input>
+//       <br></br> <br></br>
+//       {show.password}
+//       <input type="password" onChange={fun1} name="password" value={data.password} placeholder="Enter your password"></input>
+//       <br></br> <br></br>
+//       <button type="submit" onClick={done}>click</button>
+//       </div>
+//   )
+// }
+
+// -------------------------------------------------------------------------------
+
+
 import React from 'react'
-import { useState } from 'react';
-const App=()=>{
-    let [data,SetData]= useState({
-      name:"",
-      email:"",
-      password:""
-    })
-
-    function fun1(e){
-      let {name,value}=e.target
-      SetData({...data,[name]:value})
-      console.log(data)
-    }
-    let [show,SetShow]=useState({})
-    function done(){
-      SetShow({...data})
-      console.log(show)
-    }
-
-  return(
+import SignUp from './SignUp'
+import Login from './Login'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
+// http://localhost:5173/
+const App = () => {
+  return (
     <div>
-      {show.name}
-      <input type="text" onChange={fun1} name="name" value={data.name} placeholder="Enter your name"></input> 
-      <br></br> <br></br>
-      {show.email}
-      <input type="email" onChange={fun1} name="email" value={data.email} placeholder="Enter your email"></input>
-      <br></br> <br></br>
-      {show.password}
-      <input type="password" onChange={fun1} name="password" value={data.password} placeholder="Enter your password"></input>
-      <br></br> <br></br>
-      <button type="submit" onClick={done}>click</button>
-      </div>
+      {/* <SignUp/>
+      <Login/> */}
+      <Routes>
+        <Route   path='/'    element={<Home/>}/>
+        <Route   path='/signup'    element={<SignUp/>}/>
+        <Route   path='/login'    element={<Login/>}/>
+
+
+      </Routes>
+    </div>
   )
 }
 
-
-
-
-
-
 export default App
-
