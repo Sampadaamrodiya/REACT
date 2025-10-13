@@ -43,14 +43,7 @@ const Home = () => {
       let arr=[1,2,3,4,5]
       let arr1=[6,7,8,...arr]
       console.log(arr1,"rrrr");
-      
-
-      
-
-
-
-
-
+    
      let [apiData,SetData]=     useState([])
      let [filteredddData,SetFilteredddData]=     useState([])
 
