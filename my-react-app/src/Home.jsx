@@ -58,7 +58,6 @@ const Home = () => {
       SetData(data.recipes)
       SetFilteredddData(data.recipes)
       
-
     })
 
   },[])
