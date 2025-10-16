@@ -62,6 +62,7 @@ const Home = () => {
 
   },[])
 
+  
   function deletee(id){
     // console.log(id);
   let newArrr=   apiData.filter((a,b)=>{
